@@ -1,6 +1,21 @@
-// financial report
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb, Table, Button } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import { ColumnProps } from 'antd/es/table';
+
+interface FinancialReportProps {
+    income: number;
+    expenses: number;
+}
+
+const FinancialReport: React.FC<FinancialReportProps> = ({ income, expenses }) => {
+    const netIncome = income - expenses;
+
+    return (
+        <div>
+            <h1>Financial Report</h1>
+            <p>Income: ${income.toFixed(2)}</p>
+            <p>Expenses: ${expenses.toFixed(2)}</p>
+            <p>Net Income: ${netIncome.toFixed(2)}</p>
+        </div>
+    );
+};
+
+export default FinancialReport;

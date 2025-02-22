@@ -17,6 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      {/* atrributes from financial repoert */}
+      <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
+            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          </p>
     </html>
   );
 }
